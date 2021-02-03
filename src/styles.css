@@ -10,6 +10,9 @@ body {
   font-family: Arial;
 }
 
+a {
+  text-decoration: none;
+}
 /*
   helper classes
 */
@@ -209,6 +212,7 @@ body {
 .footer-links span::after {
   content: " |";
   color: #e5e5e5;
+  cursor: default;
 }
 
 .footer-links span:last-child::after {

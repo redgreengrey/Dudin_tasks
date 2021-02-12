@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <title>Task 1.1 - Flexbox</title>
+    <link rel="stylesheet" href="media.css" />
+    <title>Task 1.2 - Adaptive</title>
   </head>
   <body>
     <div class="container">
@@ -13,31 +20,43 @@
           <a href="./index.html" class="logo">
             <img src="./images/svg/foodSense.svg" alt="Food sense logo" />
           </a>
-          <div class="aside-menu">
+          <nav class="aside-menu">
             <a
               href="./tastemakers.html"
-              class="align-center pb-30 d-flex pointer"
+              class="align-center pb-30 d-flex aside-menu__item"
             >
               <div class="aside-link-icon tastemakers"></div>
               <div class="pl-10 color-primary aside-link-text">Tastemakers</div>
             </a>
-            <a href="./blog.html" class="align-center pb-30 d-flex">
+            <a
+              href="./blog.html"
+              class="align-center pb-30 d-flex aside-menu__item"
+            >
               <div class="aside-link-icon blog"></div>
               <div class="pl-10 color-primary aside-link-text">Blog</div>
             </a>
-            <a href="./theAList.html" class="align-center pb-30 d-flex">
+            <a
+              href="./theAList.html"
+              class="align-center pb-30 d-flex aside-menu__item"
+            >
               <div class="aside-link-icon the-a-list"></div>
               <div class="pl-10 color-primary aside-link-text">The A-List</div>
             </a>
-            <a href="./contribute.html" class="align-center pb-30 d-flex">
+            <a
+              href="./contribute.html"
+              class="align-center pb-30 d-flex aside-menu__item"
+            >
               <div class="aside-link-icon contribute"></div>
               <div class="pl-10 color-primary aside-link-text">Contribute</div>
             </a>
-            <a href="./about.html" class="align-center pb-30 d-flex">
+            <a
+              href="./about.html"
+              class="align-center pb-30 d-flex aside-menu__item"
+            >
               <div class="aside-link-icon about"></div>
               <div class="pl-10 color-primary aside-link-text">About</div>
             </a>
-          </div>
+          </nav>
           <div class="aside-socials">
             <div class="aside-tweet">
               <div class="mb-10 border-bottom-dashed pt-5 pb-5">
@@ -80,14 +99,14 @@
           <div class="tabs d-flex mb-30">
             <a
               href="./tastemakers.html"
-              class="tab pointer bgc-light pl-20 color-primary d-flex-col justify-center"
+              class="bgc-light tab pl-20 color-primary d-flex-col justify-center"
             >
               <div class="tab-header">Tastemakers</div>
               <div class="tab-description">Feast your eyes & get reciepes!</div>
             </a>
             <a
               href="./blog.html"
-              class="tab pointer bgc-light pl-20 color-primary d-flex-col justify-center"
+              class="bgc-light tab pl-20 color-primary d-flex-col justify-center"
             >
               <div class="tab-header">Blog</div>
               <div class="tab-description">
@@ -96,14 +115,14 @@
             </a>
             <a
               href="./theAList.html"
-              class="tab pointer bgc-light pl-20 color-primary d-flex-col justify-center"
+              class="bgc-light tab pl-20 color-primary d-flex-col justify-center"
             >
               <div class="tab-header">The A-List</div>
               <div class="tab-description">Handpicked, absolute favorites</div>
             </a>
             <a
               href="./contribute.html"
-              class="tab pointer bgc-light-active pl-20 color-primary d-flex-col justify-center"
+              class="bgc-light tab pl-20 color-primary d-flex-col justify-center"
             >
               <div class="tab-header">Contribute</div>
               <div class="tab-description">We want to hear from you!</div>
@@ -117,27 +136,26 @@
               <div class="mr-15 d-flex align-center justify-center">
                 <div class="sign-up__icon"></div>
               </div>
-              <p>
+              <div class="subscribe-box__text">
                 Sign up for out newsletter to receive a handpicked selection of
                 the best stories, recipes, and news, delivered weekly to your
                 inbox.
-              </p>
+              </div>
             </a>
-            <form class="ml-30">
+            <form class="subscribe-box__form d-flex">
               <input class="sign-up__input" type="text" />
               <button class="sign-up__button pointer">Subscribe</button>
             </form>
           </div>
           <div class="cards">
             <div class="card d-flex-col">
-              <div class="card__img mb-10 pointer">
-                <a href="./best-cookbooks-summer-2012">
-                  <img
-                    src="./images/cards/cookbooks.png"
-                    alt="best summer cookbooks"
-                  />
-                </a>
-              </div>
+              <a href="./best-cookbooks-summer-2012" class="card__img mb-10">
+                <img
+                  src="./images/cards/cookbooks.png"
+                  alt="best summer cookbooks"
+                  class="img-item"
+                />
+              </a>
               <a
                 href="./best-cookbooks-summer-2012"
                 class="card__header mb-10 color-primary"
@@ -149,7 +167,7 @@
                 gardens,” NPR has put together an impressive collection of 10
                 summer cookbooks.
               </div>
-              <div>
+              <div class="card__info">
                 <span class="card__date color-smokie">May 23, 2012 /</span>
                 <a
                   href="./best-cookbooks-summer-2012"
@@ -162,11 +180,12 @@
             <div class="card d-flex-col">
               <a
                 href="./how-to-make-vegetable-chips.html"
-                class="card__img mb-10 pointer"
+                class="card__img mb-10"
               >
                 <img
                   src="./images/cards/vegetable-chips.png"
                   alt="best summer cookbooks"
+                  class="img-item"
                 />
               </a>
               <a
@@ -180,7 +199,7 @@
                 brother and I were visiting our cousin in Brooklyn, and before a
                 very thoughtfully prepared vagan...
               </div>
-              <div>
+              <div class="card__info">
                 <span class="card__date color-smokie">May 23, 2012 /</span>
                 <a
                   href="./how-to-make-vegetable-chips.html"
@@ -191,10 +210,11 @@
               </div>
             </div>
             <div class="card d-flex-col">
-              <a href="./join-pinterest.html" class="card__img mb-10 pointer">
+              <a href="./join-pinterest.html" class="card__img mb-10">
                 <img
                   src="./images/cards/joinPinterest.png"
                   alt="best summer cookbooks"
+                  class="img-item"
                 />
               </a>
               <a
@@ -206,7 +226,7 @@
               <div class="card__body mb-10 color-dark">
                 If I could curate a cookbook for you, this would be it.
               </div>
-              <div>
+              <div class="card__info">
                 <span class="card__date color-smokie">May 23, 2012 /</span>
                 <a
                   href="./join-pinterest.html"
@@ -219,11 +239,12 @@
             <div class="card d-flex-col">
               <a
                 href="./recipes-from-a-sunday-supper.html"
-                class="card__img mb-10 pointer"
+                class="card__img mb-10"
               >
                 <img
                   src="./images/cards/sundaySupper.png"
                   alt="best summer cookbooks"
+                  class="img-item"
                 />
               </a>
               <a
@@ -236,7 +257,7 @@
                 With the best of the season coming from “orchards, farms and
                 gardens,” NPR has put together an impressive collection of 10
                 summer cookbooks.
-              </div>
+              </div class="card__info">
               <div>
                 <span class="card__date color-smokie">May 23, 2012 /</span>
                 <a
@@ -254,13 +275,13 @@
         class="footer border-top-solid d-flex align-center justify-space-between"
       >
         <div class="footer-links__wrapper d-flex-col">
-          <div class="footer-links">
+          <nav class="footer-links">
             <a href="./privacyPolicy.html" class="color-primary">
               Privacy Policy
             </a>
             <a href="./termsOfUse.html" class="color-primary">Terms of Use </a>
             <a href="./contacts.html" class="color-primary">Contact</a>
-          </div>
+          </nav>
           <div class="color-smokie footer-copyright">
             &#169; 2016 Food Sense, all rights reserved.
           </div>

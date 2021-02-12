@@ -1,7 +1,6 @@
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
 }
 
 body {
@@ -125,9 +124,11 @@ a {
   min-height: 1130px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .main {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   padding-top: 40px;
@@ -142,12 +143,6 @@ a {
 
 .article {
   width: 900px;
-}
-
-.logo__picture {
-  background-image: url(./images/svg/foodSense.svg);
-  width: 120px;
-  height: 120px;
 }
 
 .aside-button {
@@ -224,7 +219,7 @@ a {
 }
 
 .footer {
-  width: 1080px;
+  width: 100%;
   height: 90px;
   margin-top: 40px;
   border-top: 2px solid #e5e5e5;
@@ -275,9 +270,10 @@ a {
 
 .baner {
   background: url("./images/main-picture.png");
-  width: 900px;
+  max-width: 900px;
   height: 445px;
   position: relative;
+  background-size: cover;
 }
 
 .baner__inner {
@@ -314,13 +310,13 @@ a {
 }
 
 .tabs {
-  height: 85px;
-  width: 900px;
+  max-width: 900px;
 }
 
 .tab {
   width: 225px;
-  height: 85px;
+  padding: 5px;
+  padding: 20px;
 }
 
 .tab:hover {
@@ -379,6 +375,7 @@ a {
   line-height: 10px;
   letter-spacing: 0em;
   text-align: center;
+  margin-left: 10px;
 }
 
 .subscribe-box {
@@ -388,14 +385,17 @@ a {
 }
 
 .cards {
-  width: 900px;
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 
 .card {
   width: 205px;
+  margin-bottom: 10px;
+}
+
+.card:not(:nth-child(4n)) {
+  margin-right: 25px;
 }
 
 .card__img {
@@ -411,6 +411,7 @@ a {
   line-height: 21px;
   letter-spacing: -0.02em;
   text-align: left;
+  margin-top: 10px;
 }
 
 .card__body,

@@ -267,16 +267,11 @@
 }
 
 @media (max-width: 480px) {
-  body {
-    margin: 0 1px;
-  }
-
   .container {
     width: 100%;
   }
 
   .main {
-    width: 100%;
     flex-direction: column;
   }
 
@@ -302,6 +297,10 @@
     justify-content: space-around;
   }
 
+  .aside-link-text {
+    padding-left: 5px;
+  }
+
   .aside-menu__item {
     display: flex;
     flex-direction: column;
@@ -317,11 +316,12 @@
     width: 100%;
     height: 353px;
     background-size: cover;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
   .baner__inner {
     width: 100%;
-    top: 79%;
   }
 
   .baner__header {
@@ -340,22 +340,23 @@
   }
 
   .subscribe-box {
-    width: 100%;
-    height: 80px;
+    padding-top: 10px;
+    margin-top: 20px;
     flex-direction: column;
     justify-content: space-between;
     padding: 10px 0;
   }
 
   .sign-up__description {
-    width: 100%;
+    width: 98%;
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
   }
 
   .subscribe-box__text {
-    width: 100%;
+    width: 365px;
+    margin-right: 5px;
   }
 
   .subscribe-box__form {
@@ -372,12 +373,12 @@
   }
 
   .cards {
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0`;
+    padding: 0 20px;
+    margin: 0;
   }
 
   .card {
@@ -404,11 +405,11 @@
   }
 
   .card__body {
-    width: 95%;
+    width: 100%;
   }
 
   .card__info {
-    width: 70%;
+    width: 100%;
   }
 
   .card__date,

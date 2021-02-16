@@ -1,24 +1,13 @@
 @media (max-width: 1176px) and (min-width: 993px) {
   .container {
-    width: 896px;
+    width: 905px;
   }
 
   .article {
     width: 712px;
-    margin-left: 45px;
-  }
-
-  .baner {
-    width: 712px;
-    height: 445px;
-  }
-
-  .tabs {
-    width: 712px;
   }
 
   .tab {
-    width: 178px;
     padding: 10px;
     display: flex;
     justify-content: center;
@@ -29,24 +18,10 @@
     display: none;
   }
 
-  .subscribe-box__text {
-    width: 365px;
-  }
-
-  .sign-up__button {
-    margin-left: 5px;
-  }
-
-  .card {
-    width: 159px;
-  }
-
-  .card__img {
-    width: 155px;
-  }
-
+  .card,
+  .card__img,
   a > img.img-item {
-    width: 150px;
+    width: 155px;
   }
 }
 
@@ -72,11 +47,12 @@
   }
 
   .aside-menu {
-    width: 500px;
     height: 85px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-grow: 1;
+    margin-left: 50px;
   }
 
   .aside-menu__item {
@@ -88,15 +64,8 @@
     margin-top: 10px;
   }
 
-  .article {
-    width: 712px;
-  }
-
   .tab {
     padding: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   .tab-description {
@@ -104,26 +73,11 @@
   }
 
   .subscribe-box {
-    padding: 10px 0px;
+    padding: 10px 25px;
   }
 
-  .subscribe-box__text {
-    width: 365px;
-  }
-
-  .sign-up__description {
-    width: 370px;
-  }
-
-  .card {
-    width: 159px;
-  }
-
-  .card__img {
-    width: 159px;
-    margin: 0;
-  }
-
+  .card,
+  .card__img,
   a > img.img-item {
     width: 159px;
   }
@@ -209,7 +163,6 @@
   }
 
   .subscribe-box {
-    /* width: 100%; */
     height: 80px;
     margin-top: 20px;
     padding: 10px 0px;
@@ -236,16 +189,12 @@
   }
 
   .sign-up__input {
-    width: 384px;
-  }
-
-  .cards {
-    /* width: 100%; */
+    display: flex;
+    flex-grow: 1;
   }
 
   .card {
     width: 45%;
-    height: 355px;
   }
 
   .card:not(:nth-child(4n)) {
@@ -258,7 +207,6 @@
 
   .card__img {
     width: 100%;
-    /* margin: 0; */
   }
 
   a > img.img-item {
@@ -329,6 +277,7 @@
     opacity: 0.6;
     display: flex;
     justify-content: left;
+    padding: 0 15px 0 15px;
   }
 
   .banner__description {
@@ -354,22 +303,17 @@
     margin-top: 10px;
   }
 
-  .subscribe-box__text {
-    width: 365px;
-    margin-right: 5px;
-  }
-
   .subscribe-box__form {
     width: 100%;
     margin-top: 15px;
   }
 
   .sign-up__input {
-    width: 70%;
+    flex-grow: 1;
   }
 
   .sign-up__button {
-    margin-left: 15px;
+    margin-right: 15px;
   }
 
   .cards {
@@ -408,8 +352,8 @@
     width: 100%;
   }
 
-  .card__info {
-    width: 100%;
+  .card__text {
+    padding: 20px 0 10px 0;
   }
 
   .card__date,

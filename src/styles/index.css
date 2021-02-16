@@ -19,14 +19,8 @@
 }
 
 .nav {
-  width: 140px;
-  height: 645px;
   display: flex;
   flex-direction: column;
-}
-
-.article {
-  width: 900px;
 }
 
 .aside-button {
@@ -104,7 +98,6 @@
 
 .baner {
   background: url("../images/main-picture.png");
-  max-width: 900px;
   height: 445px;
   position: relative;
   background-size: cover;
@@ -143,14 +136,10 @@
   padding: 10px 0;
 }
 
-.tabs {
-  max-width: 900px;
-}
-
 .tab {
-  width: 225px;
   padding: 5px;
   padding: 20px;
+  flex-grow: 1;
 }
 
 .tab:hover {
@@ -245,7 +234,7 @@
   line-height: 21px;
   letter-spacing: -0.02em;
   text-align: left;
-  margin-top: 10px;
+  /* padding-bottom: 20px; */
 }
 
 .card__body,

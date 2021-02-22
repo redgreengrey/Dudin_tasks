@@ -1,6 +1,6 @@
-/*
-  main classes
-*/
+@import "./_footer.scss";
+@import "./_helpers.scss";
+@import "./_media.scss";
 
 .container {
   background-color: #fff;
@@ -234,7 +234,6 @@
   line-height: 21px;
   letter-spacing: -0.02em;
   text-align: left;
-  /* padding-bottom: 20px; */
 }
 
 .card__body,

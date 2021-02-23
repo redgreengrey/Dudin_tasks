@@ -1,0 +1,26 @@
+@media (max-width: 1176px) and (min-width: 993px) {
+  .container {
+    width: 905px;
+  }
+
+  .article {
+    width: 712px;
+  }
+
+  .tab {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .tab-description {
+    display: none;
+  }
+
+  .card,
+  .card__img,
+  a > img.img-item {
+    width: 155px;
+  }
+}

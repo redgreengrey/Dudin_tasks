@@ -1,0 +1,43 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 205px;
+  margin-bottom: 10px;
+
+  &:not(:nth-child(4n)) {
+    margin-right: 25px;
+  }
+
+  &__img {
+    width: 200px;
+    border: 1px solid #e5e5e5;
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.25));
+  }
+
+  &__header {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  &__body,
+  &__date,
+  &__read-more {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    text-align: left;
+  }
+
+  &__read-more::after {
+    content: "...";
+  }
+}

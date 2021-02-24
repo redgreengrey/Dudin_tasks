@@ -63,6 +63,10 @@
       top: 79%;
     }
 
+    &__header {
+      opacity: 0.6;
+    }
+
     &__header,
     &__description {
       width: 100%;
@@ -114,6 +118,7 @@
 
   .card {
     width: 45%;
+    flex-grow: 1;
 
     &:not(:nth-child(4n)) {
       margin-right: 0;

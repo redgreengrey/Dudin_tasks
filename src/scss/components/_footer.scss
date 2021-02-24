@@ -4,13 +4,9 @@
   margin-top: 40px;
   border-top: 2px solid #e5e5e5;
 
-  &-links {
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 12px;
-    letter-spacing: -0.02em;
-    text-align: left;
+  &-links,
+  &-copyright {
+    @include text-style(12px, normal, 400, 12px, -0.02em, left);
   }
 
   &-links a::after {
@@ -21,15 +17,6 @@
 
   &-links a:last-child::after {
     display: none;
-  }
-
-  &-copyright {
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 12px;
-    letter-spacing: -0.02em;
-    text-align: left;
   }
 
   &-icon {

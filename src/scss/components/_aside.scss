@@ -3,11 +3,11 @@
   flex-direction: column;
 
   &-button {
-    height: 30px;
     width: 140px;
+    height: 30px;
     border-radius: 5px;
-    background: #ffffff;
-    border: 1px solid #e5e5e5;
+    background: $color-white;
+    border: 1px solid $color-smokie;
     cursor: pointer;
     font-style: italic;
     font-weight: normal;
@@ -16,7 +16,11 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    color: #34aca7;
+    color: $color-primary;
+  }
+
+  &-button:hover {
+    background-color: $color-smokie;
   }
 
   &-tweet {
@@ -25,8 +29,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 12px;
-    letter-spacing: 0em;
-    text-align: left;
   }
 
   &-link-text {
@@ -36,18 +38,12 @@
     line-height: 14px;
   }
 
-  &-button:hover {
-    background-color: #eee;
-  }
-
   &-text-block {
     width: 140px;
     font-size: 10px;
     font-style: italic;
     font-weight: 400;
     line-height: 19px;
-    letter-spacing: 0em;
-    text-align: left;
   }
 
   &-link-icon {

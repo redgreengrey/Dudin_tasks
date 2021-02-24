@@ -7,7 +7,8 @@
 .sign-up {
   &__icon {
     background-image: url(../images/svg/signUp.svg);
-    width: 32px;
+    @include cover-background();
+    min-width: 32px;
     height: 26px;
   }
 
@@ -31,10 +32,10 @@
   &__button {
     width: 80px;
     height: 23px;
+    border-radius: 2px;
     background: linear-gradient(180deg, #f4f3f3 0%, #bbb9b9 100%);
     border: 1px solid #e5e5e5;
     box-sizing: border-box;
-    border-radius: 2px;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;

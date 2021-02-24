@@ -1,0 +1,41 @@
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin text-style(
+  $font-size,
+  $font-style,
+  $font-weight,
+  $line-height,
+  $letter-spacing,
+  $text-align
+) {
+  font-size: $font-size;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  text-align: text-align;
+}
+
+@mixin baner-text(
+  $color,
+  $bg-color,
+  $font-size,
+  $style,
+  $weight,
+  $line-height,
+  $letter-spacing
+) {
+  color: $color;
+  background-color: $bg-color;
+  font-size: $font-size;
+  font-weight: $weight;
+  font-style: $style;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+  z-index: 2;
+  padding: 10px 0;
+}

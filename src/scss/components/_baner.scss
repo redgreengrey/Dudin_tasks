@@ -1,0 +1,21 @@
+.baner {
+  @include cover-background;
+  background: url("../images/main-picture.png");
+  height: 445px;
+  position: relative;
+
+  &__inner {
+    position: absolute;
+    top: 63%;
+  }
+
+  &__header {
+    @include baner-text(#000000, #ffffff, 22px, italic, 400, 22px, 0.01em);
+    width: 270px;
+  }
+
+  &__description {
+    @include baner-text(#ffffff, #000000, 14px, italic, 400, 14px, 0em);
+    width: 480px;
+  }
+}

@@ -18,23 +18,13 @@
   }
 
   &__header {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 21px;
-    letter-spacing: -0.02em;
-    text-align: left;
+    @include text-style(16px, normal, 400, 21px, -0.02em, left);
   }
 
   &__body,
   &__date,
   &__read-more {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: -0.02em;
-    text-align: left;
+    @include text-style(14px, normal, 400, 20px, -0.02em, left);
   }
 
   &__read-more::after {

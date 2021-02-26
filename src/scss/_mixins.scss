@@ -39,3 +39,9 @@
   z-index: 2;
   padding: 10px 0;
 }
+
+@mixin d-flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,7 +1,17 @@
+.tabs {
+  display: flex;
+  margin-bottom: 30px;
+}
+
 .tab {
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding: 20px;
   flex-grow: 1;
+  padding-left: 20px;
+  color: $color-primary;
+  background-color: $color-light;
 
   &:hover {
     background-color: $color-light-active;

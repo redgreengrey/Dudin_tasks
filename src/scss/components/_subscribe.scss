@@ -1,18 +1,28 @@
 .subscribe-box {
+  @include d-flex-center();
   border-top: 1px dashed #e5e5e5;
   border-bottom: 1px dashed #e5e5e5;
   padding: 10px 15px;
+  margin-bottom: 30px;
+
+  &__form {
+    display: flex;
+  }
 }
 
 .sign-up {
   &__icon {
-    background-image: url(../images/svg/signUp.svg);
     @include cover-background();
+    @include d-flex-center();
+    margin-right: 15px;
+    background-image: url(../images/svg/signUp.svg);
     min-width: 32px;
     height: 26px;
   }
 
   &__description {
+    @include d-flex-center();
+    margin-left: 5px;
     width: 530px;
     height: 32px;
     font-style: italic;
@@ -43,5 +53,6 @@
     letter-spacing: 0em;
     text-align: center;
     margin-left: 10px;
+    cursor: pointer;
   }
 }

@@ -11,6 +11,10 @@
     margin-right: 25px;
   }
 
+  &__text {
+    margin-top: 10px;
+  }
+
   &__img {
     width: 200px;
     border: 1px solid #e5e5e5;
@@ -19,6 +23,21 @@
 
   &__header {
     @include text-style(16px, normal, 400, 21px, -0.02em, left);
+    color: $color-primary;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    margin: 10px 0;
+    color: $color-dark;
+  }
+
+  &__date {
+    color: $color-smokie;
+  }
+
+  &__read-more {
+    color: $color-primary;
   }
 
   &__body,

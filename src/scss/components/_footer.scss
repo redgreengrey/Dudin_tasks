@@ -1,7 +1,10 @@
 .footer {
+  @include d-flex-center();
+  justify-content: space-between;
   width: 100%;
   height: 90px;
   margin-top: 40px;
+  border-top: 2px solid #e5e5e5;
   border-top: 2px solid #e5e5e5;
 
   &-links,
@@ -17,6 +20,18 @@
 
   &-links a:last-child::after {
     display: none;
+  }
+
+  &-links__item {
+    color: $color-primary;
+  }
+
+  &-copyright {
+    color: $color-smokie;
+  }
+
+  &-socials {
+    display: flex;
   }
 
   &-icon {

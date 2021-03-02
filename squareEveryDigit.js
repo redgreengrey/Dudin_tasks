@@ -7,7 +7,7 @@
 
   const result = x.join("");
 
-  return result;
+  return +result;
 })(444);
 
 (function (x) {

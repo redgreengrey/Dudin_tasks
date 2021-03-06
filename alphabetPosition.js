@@ -1,7 +1,5 @@
-(function (text) {
-  text = text.toLocaleLowerCase().replace(/[^A-Za-z]/gi, "");
-
-  const alphabet = {
+const alphabetPosition = (function () {
+  const alphabetObject = {
     a: 1,
     b: 2,
     c: 3,
@@ -30,33 +28,50 @@
     z: 26,
   };
 
-  return text.split("").map((l) => alphabet[l]);
-})("test test");
+  const getNumbersByMap = function (text) {
+    text = text.toLocaleLowerCase().replace(/[^A-Za-z]/gi, "");
 
-(function (text) {
-  let result = "";
-  for (let i = 0; i < text.length; i++) {
-    let code = text.toUpperCase().charCodeAt(i);
-    if (code > 64 && code < 91) {
-      result += code - 64 + " ";
+    return text
+      .split("")
+      .map((l) => alphabetObject[l])
+      .join(" ");
+  };
+
+  const getNumbersByCharcode = function (text) {
+    let result = "";
+    for (let i = 0; i < text.length; i++) {
+      let code = text.toUpperCase().charCodeAt(i);
+      if (code > 64 && code < 91) {
+        result += code - 64 + " ";
+      }
     }
-  }
 
-  return result.slice(0, result.length - 1);
-})("test test");
+    return result.slice(0, result.length - 1);
+  };
 
-(function (text) {
-  let bytes = text.split("");
-  let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
-  for (let i = 0, len = text.length; i < len; i++) {
-    bytes[i] = alphabet.indexOf(bytes[i].toLowerCase()) + 1;
-  }
+  const getNumbersByIndex = function (text) {
+    let bytes = text.split("");
+    let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+    for (let i = 0, len = text.length; i < len; i++) {
+      bytes[i] = alphabet.indexOf(bytes[i].toLowerCase()) + 1;
+    }
 
-  const result = bytes
-    .filter((n) => {
-      if (n > 0) return n;
-    })
-    .join(" ");
+    const result = bytes
+      .filter((n) => {
+        if (n > 0) return n;
+      })
+      .join(" ");
 
-  return result;
-})("test test");
+    return result;
+  };
+
+  return {
+    getNumbersByMap,
+    getNumbersByCharcode,
+    getNumbersByIndex,
+  };
+})();
+
+console.log(alphabetPosition.getNumbersByMap("type some text"));
+console.log(alphabetPosition.getNumbersByCharcode("type some text"));
+console.log(alphabetPosition.getNumbersByIndex("type some text"));

@@ -27,22 +27,25 @@ const alphabetPosition = (function () {
     y: 25,
     z: 26,
   };
+  const alphabetObjectString = Object.keys(alphabetObject).join("");
 
   const getNumbersByMap = function (text) {
     text = text.toLocaleLowerCase().replace(/[^A-Za-z]/gi, "");
 
     return text
       .split("")
-      .map((l) => alphabetObject[l])
+      .map((letter) => alphabetObject[letter])
       .join(" ");
   };
 
   const getNumbersByCharcode = function (text) {
+    const charA = 65;
+    const charZ = 90;
     let result = "";
     for (let i = 0; i < text.length; i++) {
       let code = text.toUpperCase().charCodeAt(i);
-      if (code > 64 && code < 91) {
-        result += code - 64 + " ";
+      if (code >= charA && code <= charZ) {
+        result += code - charA + 1 + " ";
       }
     }
 
@@ -51,7 +54,7 @@ const alphabetPosition = (function () {
 
   const getNumbersByIndex = function (text) {
     let bytes = text.split("");
-    let alphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+    let alphabet = alphabetObjectString.split("");
     for (let i = 0, len = text.length; i < len; i++) {
       bytes[i] = alphabet.indexOf(bytes[i].toLowerCase()) + 1;
     }
@@ -72,6 +75,6 @@ const alphabetPosition = (function () {
   };
 })();
 
-console.log(alphabetPosition.getNumbersByMap("type some text"));
-console.log(alphabetPosition.getNumbersByCharcode("type some text"));
-console.log(alphabetPosition.getNumbersByIndex("type some text"));
+console.log(alphabetPosition.getNumbersByMap("t12ype some t..^ext"));
+console.log(alphabetPosition.getNumbersByCharcode("type,.12 some text12.."));
+console.log(alphabetPosition.getNumbersByIndex("typ#^e some te$*$*xt"));

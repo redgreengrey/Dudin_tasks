@@ -1,4 +1,4 @@
-# Tamagotchi's like game based on create-react-app
+# Todolist
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

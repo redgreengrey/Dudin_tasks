@@ -1,7 +1,7 @@
 import Nav from "./components/Nav";
-import Home from "./components/Home";
-import Game from "./components/Game";
-import GameHistory from "./components/GameHistory";
+import Home from "./pages/Home";
+import Game from "./pages/Game";
+import GameHistory from "./pages/GameHistory";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.scss";
 

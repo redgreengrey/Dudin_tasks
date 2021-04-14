@@ -4,22 +4,24 @@ import {
   DRINKS,
   DEEDS,
   RELAXATION,
-  randomInteger,
-} from "../utils/helpers";
+  INITIAL_SCORE,
+} from "../utils/constants";
+
+import { randomInteger } from "../utils/helpers";
 
 class Store {
   actionsList = {
     hp: {
-      score: 50,
+      score: INITIAL_SCORE,
     },
     hunger: {
-      score: 50,
+      score: INITIAL_SCORE,
     },
     drinking: {
-      score: 50,
+      score: INITIAL_SCORE,
     },
     tiredness: {
-      score: 50,
+      score: INITIAL_SCORE,
     },
     historyList: [],
   };
@@ -34,6 +36,22 @@ class Store {
 
   get actionsHistory() {
     return this.actionsList.historyList;
+  }
+
+  get getHunger() {
+    return this.actionsList.hunger.score;
+  }
+
+  get getHp() {
+    return this.actionsList.hp.score;
+  }
+
+  get getDrinking() {
+    return this.actionsList.drinking.score;
+  }
+
+  get getTiredness() {
+    return this.actionsList.tiredness.score;
   }
 
   eat() {
